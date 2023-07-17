@@ -1,3 +1,1 @@
-#!/bin/bash
-echo "Everything you need to know to start with C"
-
+alx-low_level_programming
