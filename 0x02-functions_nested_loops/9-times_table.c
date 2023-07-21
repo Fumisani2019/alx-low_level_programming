@@ -5,12 +5,11 @@
  * Description: it prints 9 times table starting with 0
  * Return: Nothing
  */
-
 void times_table(void)
 {
 	int i, j, n;
 
-	for (i = 0; j <= 9; i++)
+	for (i = 0; i <= 9; i++)
 	{
 		for (j = 0; j <= 9; j++)
 		{
@@ -40,3 +39,4 @@ void times_table(void)
 		_putchar('\n');
 	}
 }
+
