@@ -3,21 +3,25 @@
 /**
  * rev_string - Reserves a string
  * @s: input string
- * Return: String in reserve
  */
 void rev_string(char *s)
 {
-	char rev = *s(0);
-	int counter = 0;
-	int i;
+	char temp;
+	int start = 0;
+	int end = 0;
 
-	while (s[counter] != '\0')
-	counter++;
-	for (i = 0; i < counter; i++)
+	while (s[end] != '\0')
+	end++;
+
+	end--;
+
+	while (start < end)
 	{
-		counter--;
-		rev = s[i];
-		s[1] = s[counter];
-		s[counter] = rev;
+
+		temp = s[start];
+		s[start] = s[end];
+		s[end] = temp;
+		start++;
+		end--;
 	}
 }
