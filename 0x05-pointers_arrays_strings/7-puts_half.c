@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _strlen - Returns the length of a string
+ * _strlen - returns the length of a string
  * @s: Input string
- * Return: Length of the string
+ * Return: length
  */
 int _strlen(char *s)
 {
