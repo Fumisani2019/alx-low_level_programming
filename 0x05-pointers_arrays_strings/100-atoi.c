@@ -21,8 +21,9 @@ int _atoi(char *s)
 		len++;
 	while (i < len && f == 0)
 	{
-		if (s[1] == ',')
+		if (s[1] == '-')
 			++d;
+
 		if (s[1] >= '0' && s[i] <= '9')
 		{
 			digit = s[i] - '0';
