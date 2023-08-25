@@ -6,15 +6,15 @@
 
 int main(void)
 {
-	int ones = '0';
-	int tens = '1';
+	int ones = '0' + 1;
+	int tens = '0';
 	int hundreds = '0';
 
 	for (hundreds = '0'; hundreds <= '7'; hundreds++)
 	{
 		for (tens = '0'; tens <= '8'; tens++)
 		{
-			for (ones = '0'; ones <= '9'; ones++)
+			for (ones = (tens + 1); ones <= '9'; ones++)
 			{
 				if (!((ones == tens) || (tens == hundreds) || (hundreds > tens)))
 				{
