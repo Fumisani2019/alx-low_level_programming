@@ -2,41 +2,49 @@
 #include <string.h>
 #include "lists.h"
 
- /**
- * *add_node_end - Adds a new node with a string at the end of a list_t list.
- * @head: Pointer to the pointer to the head of the list. If the list is empty
- * @str: String to be stored in the new node.
+/**
+ * add_node_end - Add new node in the end of the linked list.
+ * @head: head of the linked list.
+ * @str: string to add.
  *
- * Return: address of the new element, or NULL if it failed
+ * Return: pointer of the new node added to linked list.
  */
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *start;
-	list_t *end = *head;
-	unsigned int len = 0;
+	list_t *new;
+	list_t *temp;
 
-	while (str[len])
-		len++;
-
-	start = malloc(sizeof(list_t));
-	if (!start)
+	new = malloc(sizeof(list_t));
+	if (!new)
 		return (NULL);
-
-	start->str = strdup(str);
-	start->len = len;
-	start->next = NULL;
-
+	temp = *head;
+	new->str = strdup(str);
+	new->len = _strlen(str);
+	new->next = NULL;
 	if (*head == NULL)
 	{
-		*head = start;
-		return (start);
+		*head = new;
+		return (new);
 	}
+	while (temp->next != NULL)
+		temp = temp->next;
+	temp->next = new;
+	return (new);
+}
 
-	while (end->next)
-		end = end->next;
+/**
+ * _strlen - Calculate lenght of a string.
+ * @s: string.
+ *
+ * Return: lenght of the string s.
+ */
 
-	end->next = start;
+int _strlen(const char *s)
+{
+	int idx = 0;
 
-	return (start);
+	for (; s[idx]; idx++)
+	;
+	return (idx);
 }
