@@ -55,6 +55,7 @@ You are allowed to use dprintf
 
 4. elf
 
+Score: 0.0% (Checks completed: 0.0%)
 Write a program that displays the information contained in the ELF header at the start of an ELF file.
 
 Usage: elf_header elf_filename
